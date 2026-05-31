@@ -87,6 +87,4 @@ MeetScribe-Converts-meeting-audio-into-structured-minutes-and-action-items/
 
 This project is licensed under the MIT License — see [LICENSE](LICENSE).
 
-## Acknowledgments
 
-Based on course material from the LLM Engineering curriculum. Student contribution reference: Emad S. (Gradio streaming UI variant).
