@@ -1,6 +1,6 @@
 # MeetScribe
 
-Convert meeting audio into structured minutes and action items using open-source and commercial AI models. Built as a Google Colab notebook for easy GPU access.
+Convert meeting audio into structured minutes and action items using open-source AI models. Built as a Google Colab notebook for easy GPU access.
 
 ## Overview
 
@@ -24,8 +24,7 @@ Meeting Audio (MP3)
         ▼
 ┌───────────────────┐
 │  Step 1: Transcribe │
-│  • Whisper (HF)     │  open-source
-│  • GPT-4o-mini      │  OpenAI API (optional)
+│  Whisper (HF)       │
 └───────────────────┘
         │
         ▼
@@ -42,8 +41,7 @@ Structured Markdown Minutes
 
 | Component | Model / library |
 |-----------|-----------------|
-| Transcription (open source) | `openai/whisper-medium.en` via Hugging Face Transformers |
-| Transcription (API) | `gpt-4o-mini-transcribe` (OpenAI) |
+| Transcription | `openai/whisper-medium.en` via Hugging Face Transformers |
 | Minutes generation | `meta-llama/Llama-3.2-3B-Instruct` (4-bit quantization) |
 | Runtime | Google Colab (GPU recommended) |
 
@@ -51,15 +49,12 @@ Structured Markdown Minutes
 
 - [Google Colab](https://colab.research.google.com/) with a **T4 GPU** runtime
 - [Hugging Face](https://huggingface.co/) account and access token (for Whisper and Llama)
-- [OpenAI API key](https://platform.openai.com/) (optional, for API-based transcription)
 - Meeting audio file (MP3)
 
 ## Getting started
 
 1. Open [`MeetScribe.ipynb`](MeetScribe.ipynb) in Google Colab.
-2. Set Colab secrets:
-   - `HF_TOKEN` — Hugging Face access token
-   - `OPENAI_API_KEY` — OpenAI key (if using API transcription)
+2. Set the Colab secret `HF_TOKEN` — your Hugging Face access token.
 3. Mount Google Drive and place your audio file (default path: `MyDrive/llms/denver_extract.mp3`).
 4. Run all cells from top to bottom.
 
